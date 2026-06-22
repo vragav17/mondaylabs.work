@@ -634,6 +634,16 @@ body {
   font-size: 0.8rem;
   color: rgba(255,255,255,.3);
 }
+.cta-direct {
+  margin-top: 10px;
+  color: rgba(255,255,255,.4);
+}
+.cta-direct a {
+  color: rgba(255,255,255,.7);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cta-direct a:hover { color: #fff; }
 
 /* ============================================================
    FOOTER

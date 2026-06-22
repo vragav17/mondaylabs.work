@@ -16,13 +16,13 @@ document.getElementById('waitlistForm')?.addEventListener('submit', (e) => {
   e.preventDefault();
   const input = e.target.querySelector('input[type="email"]');
   const btn = e.target.querySelector('button');
-  btn.textContent = "You're on the list!";
+  const userEmail = input.value.trim();
+  const subject = encodeURIComponent('Waitlist — SlotMyFiles Early Access');
+  const body = encodeURIComponent(`Hi,\n\nPlease add me to the SlotMyFiles waitlist.\n\nMy email: ${userEmail}\n`);
+  window.location.href = `mailto:veera.ragavan.1996@gmail.com?subject=${subject}&body=${body}`;
+  btn.textContent = "Opening your mail app…";
   btn.disabled = true;
-  btn.style.background = 'var(--accent)';
-  btn.style.borderColor = 'var(--accent)';
   input.disabled = true;
-  input.value = '';
-  input.placeholder = 'Thanks! We\'ll be in touch.';
 });
 
 // Subtle scroll fade-in for sections
