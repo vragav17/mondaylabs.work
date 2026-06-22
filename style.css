@@ -457,6 +457,88 @@ body {
   margin-bottom: 12px;
 }
 
+/* Mockup — auto-routing redesign */
+.mockup-live {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #28C840;
+  letter-spacing: 0.02em;
+}
+.sidebar-section-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  padding: 10px 16px 4px;
+}
+.sidebar-divider {
+  height: 1px;
+  background: rgba(255,255,255,.06);
+  margin: 8px 12px;
+}
+.mockup-queue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 10px;
+}
+.queue-count {
+  font-size: 0.65rem;
+  background: rgba(255,255,255,.08);
+  padding: 2px 8px;
+  border-radius: 99px;
+  color: rgba(255,255,255,.35);
+}
+.file-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.chip {
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 99px;
+  letter-spacing: 0.02em;
+}
+.chip-client {
+  background: rgba(108,71,255,.25);
+  color: #a78bfa;
+}
+.chip-type {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.45);
+}
+.chip-dest {
+  background: rgba(0,212,170,.15);
+  color: var(--accent);
+}
+.chip-tag {
+  background: rgba(249,115,22,.15);
+  color: #fb923c;
+}
+.file-tag--routing {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: rgba(249,115,22,.2);
+  color: #fb923c;
+  flex-shrink: 0;
+  animation: pulse-routing 1.2s ease-in-out infinite;
+}
+.file-item--done { opacity: 0.72; }
+@keyframes pulse-routing {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
 /* Coming soon */
 .coming-soon {
   margin-top: 80px;

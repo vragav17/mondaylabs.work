@@ -101,26 +101,26 @@
           <div class="product-tag">WhatsApp Business &amp; SMB</div>
           <h3 class="product-name">SlotMyFiles</h3>
           <p class="product-desc">
-            Built for small businesses and WhatsApp Business owners — SlotMyFiles
-            lets you save files shared in your chat window directly to the
-            storage destination of your choice, without leaving the conversation.
+            Clients send files to your SlotMyFiles chat. Automation takes over —
+            routing every file to the right destination based on client, file type,
+            custom tags, and more. Zero manual work.
           </p>
           <ul class="product-features">
             <li>
-              <span class="feature-icon">💬</span>
-              <span>Works inside WhatsApp Business — slot files straight from your chat window</span>
-            </li>
-            <li>
-              <span class="feature-icon">☁️</span>
-              <span>Save to OneDrive, Amazon S3, or forward via Email in one tap</span>
-            </li>
-            <li>
-              <span class="feature-icon">🏢</span>
-              <span>Perfect for SMBs receiving invoices, receipts, and documents over WhatsApp</span>
+              <span class="feature-icon">👤</span>
+              <span>Files from Client_01, Client_02, Client_03 land in one unified inbox</span>
             </li>
             <li>
               <span class="feature-icon">⚡</span>
-              <span>No manual downloads — files land in the right place automatically</span>
+              <span>Rules engine auto-routes by client, file type, and custom tags</span>
+            </li>
+            <li>
+              <span class="feature-icon">☁️</span>
+              <span>Slot to OneDrive, Amazon S3, Email — or any destination you configure</span>
+            </li>
+            <li>
+              <span class="feature-icon">🏷️</span>
+              <span>Tag files your way — #invoice, #monthly, #urgent — rules follow the tags</span>
             </li>
           </ul>
           <div class="product-actions">
@@ -135,49 +135,72 @@
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
               <span class="mockup-title">SlotMyFiles</span>
+              <span class="mockup-live">⚡ Auto-routing ON</span>
             </div>
             <div class="mockup-body">
               <div class="mockup-sidebar">
-                <div class="sidebar-item active">💬 WhatsApp</div>
-                <div class="sidebar-item">☁️ OneDrive</div>
-                <div class="sidebar-item">🪣 Amazon S3</div>
-                <div class="sidebar-item">✉️ Email</div>
+                <div class="sidebar-section-label">Clients</div>
+                <div class="sidebar-item active">👤 Client_01</div>
+                <div class="sidebar-item">👤 Client_02</div>
+                <div class="sidebar-item">👤 Client_03</div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-label">System</div>
+                <div class="sidebar-item">⚙️ Automation</div>
                 <div class="sidebar-item">📋 History</div>
               </div>
               <div class="mockup-main">
-                <div class="mockup-chat-header">📱 Chat — Supplier A</div>
+                <div class="mockup-queue-header">
+                  <span>Incoming Files</span>
+                  <span class="queue-count">4 files</span>
+                </div>
                 <div class="file-list">
-                  <div class="file-item file-item--incoming">
+                  <div class="file-item file-item--done">
                     <span class="file-icon">📄</span>
                     <div class="file-info">
-                      <span class="file-name">Invoice_May2026.pdf</span>
-                      <span class="file-meta">Received just now</span>
+                      <span class="file-name">Invoice_Q2_2026.pdf</span>
+                      <div class="file-chips">
+                        <span class="chip chip-client">Client_01</span>
+                        <span class="chip chip-type">invoice</span>
+                        <span class="chip chip-dest">→ OneDrive</span>
+                      </div>
                     </div>
-                    <span class="file-tag file-tag--slot">Slot →</span>
+                    <span class="file-tag file-tag--done">✓ Slotted</span>
                   </div>
-                  <div class="file-item file-item--slotted">
+                  <div class="file-item file-item--done">
                     <span class="file-icon">🖼️</span>
                     <div class="file-info">
-                      <span class="file-name">Product_Photos.zip</span>
-                      <span class="file-meta">Saved to OneDrive</span>
+                      <span class="file-name">Product_Catalog.zip</span>
+                      <div class="file-chips">
+                        <span class="chip chip-client">Client_02</span>
+                        <span class="chip chip-type">media</span>
+                        <span class="chip chip-dest">→ Amazon S3</span>
+                      </div>
                     </div>
-                    <span class="file-tag file-tag--done">✓ Done</span>
+                    <span class="file-tag file-tag--done">✓ Slotted</span>
                   </div>
-                  <div class="file-item file-item--slotted">
-                    <span class="file-icon">📊</span>
-                    <div class="file-info">
-                      <span class="file-name">Order_Form.xlsx</span>
-                      <span class="file-meta">Forwarded via Email</span>
-                    </div>
-                    <span class="file-tag file-tag--done">✓ Done</span>
-                  </div>
-                  <div class="file-item file-item--slotted">
+                  <div class="file-item file-item--incoming">
                     <span class="file-icon">📝</span>
                     <div class="file-info">
                       <span class="file-name">Contract_Draft.docx</span>
-                      <span class="file-meta">Saved to S3</span>
+                      <div class="file-chips">
+                        <span class="chip chip-client">Client_03</span>
+                        <span class="chip chip-type">contract</span>
+                        <span class="chip chip-dest">→ Email</span>
+                      </div>
                     </div>
-                    <span class="file-tag file-tag--done">✓ Done</span>
+                    <span class="file-tag file-tag--routing">Routing…</span>
+                  </div>
+                  <div class="file-item file-item--done">
+                    <span class="file-icon">📊</span>
+                    <div class="file-info">
+                      <span class="file-name">Report_May.xlsx</span>
+                      <div class="file-chips">
+                        <span class="chip chip-client">Client_01</span>
+                        <span class="chip chip-type">report</span>
+                        <span class="chip chip-tag">#monthly</span>
+                      </div>
+                    </div>
+                    <span class="file-tag file-tag--done">✓ Slotted</span>
                   </div>
                 </div>
               </div>
