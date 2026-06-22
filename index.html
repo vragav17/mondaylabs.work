@@ -7,7 +7,7 @@
   <meta name="description" content="MondayLabs builds focused software products that solve real problems. Discover SlotMyFiles and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,7 +16,17 @@
   <header class="nav-wrapper">
     <nav class="nav container">
       <a href="#" class="nav-logo">
-        <span class="logo-mark">M</span>
+        <svg class="logo-mark-svg" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="sunset-mark-nav" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF6B35"/>
+              <stop offset="50%" stop-color="#F7449A"/>
+              <stop offset="100%" stop-color="#A855F7"/>
+            </linearGradient>
+          </defs>
+          <rect width="34" height="34" rx="10" fill="url(#sunset-mark-nav)"/>
+          <path d="M8 23V11l4.5 7.5L17 11l4.5 7.5L26 11v12" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <span class="logo-text">MondayLabs</span>
       </a>
       <ul class="nav-links">
@@ -34,6 +44,20 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
+      <div class="hero-logo-lockup" aria-label="MondayLabs">
+        <svg width="56" height="56" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="sunset-hero" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF6B35"/>
+              <stop offset="50%" stop-color="#F7449A"/>
+              <stop offset="100%" stop-color="#A855F7"/>
+            </linearGradient>
+          </defs>
+          <rect width="34" height="34" rx="10" fill="url(#sunset-hero)"/>
+          <path d="M8 23V11l4.5 7.5L17 11l4.5 7.5L26 11v12" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="hero-logo-wordmark">MondayLabs</span>
+      </div>
       <div class="hero-badge">Independent Software Studio</div>
       <h1 class="hero-headline">
         We build software<br />

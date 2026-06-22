@@ -145,23 +145,16 @@ body {
   text-decoration: none;
   flex-shrink: 0;
 }
-.logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: var(--brand);
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.logo-mark-svg { flex-shrink: 0; }
 .logo-text {
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--fg);
-  letter-spacing: -0.02em;
+  font-family: 'Outfit', var(--font);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(90deg, #FF6B35 0%, #F7449A 55%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .nav-links {
   display: flex;
@@ -246,6 +239,25 @@ body {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Hero logo lockup */
+.hero-logo-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.hero-logo-wordmark {
+  font-family: 'Outfit', var(--font);
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+  background: linear-gradient(90deg, #FF6B35 0%, #F7449A 50%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* blobs */
@@ -641,7 +653,12 @@ body {
 .footer-brand {
   max-width: 240px;
 }
-.footer-brand .nav-logo .logo-text { color: rgba(255,255,255,.8); }
+.footer-brand .nav-logo .logo-text {
+  background: linear-gradient(90deg, #FF9A6C 0%, #F97BBD 55%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .footer-brand p {
   margin-top: 14px;
   font-size: 0.88rem;
