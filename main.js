@@ -19,7 +19,7 @@ document.getElementById('waitlistForm')?.addEventListener('submit', (e) => {
   const userEmail = input.value.trim();
   const subject = encodeURIComponent('Waitlist — SlotMyFiles Early Access');
   const body = encodeURIComponent(`Hi,\n\nPlease add me to the SlotMyFiles waitlist.\n\nMy email: ${userEmail}\n`);
-  window.location.href = `mailto:me@mondaylabs.work?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:veera.ragavan.1996@gmail.com?subject=${subject}&body=${body}`;
   btn.textContent = "Opening your mail app…";
   btn.disabled = true;
   input.disabled = true;
