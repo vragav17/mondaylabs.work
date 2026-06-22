@@ -8,7 +8,7 @@
   <meta name="facebook-domain-verification" content="8ict0mgknzvnrowgpzvpp3ut5nuali" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,14 +19,19 @@
       <a href="#" class="nav-logo">
         <svg class="logo-mark-svg" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
-            <linearGradient id="sunset-mark-nav" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#FF6B35"/>
-              <stop offset="50%" stop-color="#F7449A"/>
-              <stop offset="100%" stop-color="#A855F7"/>
+            <linearGradient id="ml-grad-nav" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7C3AED"/>
+              <stop offset="100%" stop-color="#14B8A6"/>
             </linearGradient>
           </defs>
-          <rect width="34" height="34" rx="10" fill="url(#sunset-mark-nav)"/>
-          <path d="M8 23V11l4.5 7.5L17 11l4.5 7.5L26 11v12" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect width="34" height="34" rx="10" fill="url(#ml-grad-nav)"/>
+          <text font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="21" fill="white" x="17" y="24" text-anchor="middle">M</text>
+          <g transform="rotate(-22 17 17)">
+            <ellipse cx="17" cy="17" rx="13" ry="5" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+            <circle r="2.8" fill="white" opacity="0.9">
+              <animateMotion dur="3s" repeatCount="indefinite" path="M 30,17 A 13,5 0 0,1 4,17 A 13,5 0 0,1 30,17"/>
+            </circle>
+          </g>
         </svg>
         <span class="logo-text">MondayLabs</span>
       </a>
@@ -46,16 +51,21 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-logo-lockup" aria-label="MondayLabs">
-        <svg width="56" height="56" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
-            <linearGradient id="sunset-hero" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#FF6B35"/>
-              <stop offset="50%" stop-color="#F7449A"/>
-              <stop offset="100%" stop-color="#A855F7"/>
+            <linearGradient id="ml-grad-hero" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7C3AED"/>
+              <stop offset="100%" stop-color="#14B8A6"/>
             </linearGradient>
           </defs>
-          <rect width="34" height="34" rx="10" fill="url(#sunset-hero)"/>
-          <path d="M8 23V11l4.5 7.5L17 11l4.5 7.5L26 11v12" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect width="56" height="56" rx="16" fill="url(#ml-grad-hero)"/>
+          <text font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="34" fill="white" x="28" y="39" text-anchor="middle">M</text>
+          <g transform="rotate(-22 28 28)">
+            <ellipse cx="28" cy="28" rx="22" ry="8" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+            <circle r="4.5" fill="white" opacity="0.9">
+              <animateMotion dur="3s" repeatCount="indefinite" path="M 50,28 A 22,8 0 0,1 6,28 A 22,8 0 0,1 50,28"/>
+            </circle>
+          </g>
         </svg>
         <span class="hero-logo-wordmark">MondayLabs</span>
       </div>
@@ -272,7 +282,22 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#" class="nav-logo">
-          <span class="logo-mark">M</span>
+          <svg class="logo-mark-svg" width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="ml-grad-footer" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7C3AED"/>
+                <stop offset="100%" stop-color="#14B8A6"/>
+              </linearGradient>
+            </defs>
+            <rect width="34" height="34" rx="10" fill="url(#ml-grad-footer)"/>
+            <text font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="21" fill="white" x="17" y="24" text-anchor="middle">M</text>
+            <g transform="rotate(-22 17 17)">
+              <ellipse cx="17" cy="17" rx="13" ry="5" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+              <circle r="2.8" fill="white" opacity="0.9">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M 30,17 A 13,5 0 0,1 4,17 A 13,5 0 0,1 30,17"/>
+              </circle>
+            </g>
+          </svg>
           <span class="logo-text">MondayLabs</span>
         </a>
         <p>Building focused software that works.</p>

@@ -147,11 +147,11 @@ body {
 }
 .logo-mark-svg { flex-shrink: 0; }
 .logo-text {
-  font-family: 'Outfit', var(--font);
-  font-weight: 800;
+  font-family: 'Space Grotesk', var(--font);
+  font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.03em;
-  background: linear-gradient(90deg, #FF6B35 0%, #F7449A 55%, #A855F7 100%);
+  background: linear-gradient(90deg, #7C3AED 0%, #14B8A6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -250,11 +250,11 @@ body {
   margin-bottom: 28px;
 }
 .hero-logo-wordmark {
-  font-family: 'Outfit', var(--font);
-  font-weight: 900;
+  font-family: 'Space Grotesk', var(--font);
+  font-weight: 700;
   font-size: 2rem;
   letter-spacing: -0.04em;
-  background: linear-gradient(90deg, #FF6B35 0%, #F7449A 50%, #A855F7 100%);
+  background: linear-gradient(90deg, #7C3AED 0%, #14B8A6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -654,7 +654,7 @@ body {
   max-width: 240px;
 }
 .footer-brand .nav-logo .logo-text {
-  background: linear-gradient(90deg, #FF9A6C 0%, #F97BBD 55%, #C084FC 100%);
+  background: linear-gradient(90deg, #9D6FEF 0%, #2DD4BF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
