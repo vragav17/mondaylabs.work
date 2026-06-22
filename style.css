@@ -423,6 +423,17 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+.file-meta {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,.3);
+}
 .file-tag {
   font-size: 0.68rem;
   font-weight: 600;
@@ -431,6 +442,28 @@ body {
   background: rgba(108,71,255,.3);
   color: var(--brand-light);
   flex-shrink: 0;
+}
+.file-tag--slot {
+  background: rgba(108,71,255,.4);
+  color: #c4b5fd;
+  cursor: pointer;
+}
+.file-tag--done {
+  background: rgba(0,212,170,.2);
+  color: var(--accent);
+}
+.file-item--incoming {
+  border: 1px solid rgba(108,71,255,.35);
+}
+.file-item--slotted { opacity: 0.75; }
+.mockup-chat-header {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.5);
+  padding: 6px 12px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
 }
 
 /* Coming soon */
