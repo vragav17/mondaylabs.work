@@ -78,29 +78,29 @@
 
       <div class="product-featured">
         <div class="product-featured-content">
-          <div class="product-tag">Slack &amp; SMB</div>
+          <div class="product-tag">Slack · WhatsApp · Email</div>
           <h3 class="product-name">SlotMyFiles</h3>
           <p class="product-desc">
-            Clients send files to your SlotMyFiles chat. Automation takes over —
-            routing every file to the right destination based on client, file type,
-            custom tags, and more. Zero manual work.
+            Receive files from Slack, WhatsApp, or Email — and route them
+            automatically to the storage destination of your choice. No manual
+            downloads, no switching apps, zero friction.
           </p>
           <ul class="product-features">
             <li>
-              <span class="feature-icon">👤</span>
-              <span>Files from Client_01, Client_02, Client_03 land in one unified inbox</span>
-            </li>
-            <li>
-              <span class="feature-icon">⚡</span>
-              <span>Rules engine auto-routes by client, file type, and custom tags</span>
+              <span class="feature-icon">📥</span>
+              <span>Capture files from <strong>Slack</strong>, <strong>WhatsApp</strong>, or <strong>Email</strong> in one unified inbox</span>
             </li>
             <li>
               <span class="feature-icon">☁️</span>
-              <span>Slot to OneDrive, Amazon S3, Email — or any destination you configure</span>
+              <span>Route to <strong>Amazon S3</strong>, <strong>OneDrive</strong>, <strong>Azure Blob</strong>, or your own custom server</span>
             </li>
             <li>
-              <span class="feature-icon">🏷️</span>
-              <span>Tag files your way — #invoice, #monthly, #urgent — rules follow the tags</span>
+              <span class="feature-icon">⚡</span>
+              <span>Rules engine auto-slots by source, file type, sender, and custom tags</span>
+            </li>
+            <li>
+              <span class="feature-icon">🔌</span>
+              <span>Bring your own storage — connect any S3-compatible or custom endpoint</span>
             </li>
           </ul>
           <div class="product-actions">
@@ -119,14 +119,16 @@
             </div>
             <div class="mockup-body">
               <div class="mockup-sidebar">
-                <div class="sidebar-section-label">Clients</div>
-                <div class="sidebar-item active">👤 Client_01</div>
-                <div class="sidebar-item">👤 Client_02</div>
-                <div class="sidebar-item">👤 Client_03</div>
+                <div class="sidebar-section-label">Sources</div>
+                <div class="sidebar-item active">💬 Slack</div>
+                <div class="sidebar-item">📱 WhatsApp</div>
+                <div class="sidebar-item">✉️ Email</div>
                 <div class="sidebar-divider"></div>
-                <div class="sidebar-section-label">System</div>
-                <div class="sidebar-item">⚙️ Automation</div>
-                <div class="sidebar-item">📋 History</div>
+                <div class="sidebar-section-label">Destinations</div>
+                <div class="sidebar-item">🪣 Amazon S3</div>
+                <div class="sidebar-item">☁️ OneDrive</div>
+                <div class="sidebar-item">🗄️ Azure Blob</div>
+                <div class="sidebar-item">🔌 Custom Server</div>
               </div>
               <div class="mockup-main">
                 <div class="mockup-queue-header">
@@ -139,7 +141,7 @@
                     <div class="file-info">
                       <span class="file-name">Invoice_Q2_2026.pdf</span>
                       <div class="file-chips">
-                        <span class="chip chip-client">Client_01</span>
+                        <span class="chip chip-source">Slack</span>
                         <span class="chip chip-type">invoice</span>
                         <span class="chip chip-dest">→ OneDrive</span>
                       </div>
@@ -151,7 +153,7 @@
                     <div class="file-info">
                       <span class="file-name">Product_Catalog.zip</span>
                       <div class="file-chips">
-                        <span class="chip chip-client">Client_02</span>
+                        <span class="chip chip-source">WhatsApp</span>
                         <span class="chip chip-type">media</span>
                         <span class="chip chip-dest">→ Amazon S3</span>
                       </div>
@@ -163,9 +165,9 @@
                     <div class="file-info">
                       <span class="file-name">Contract_Draft.docx</span>
                       <div class="file-chips">
-                        <span class="chip chip-client">Client_03</span>
+                        <span class="chip chip-source">Email</span>
                         <span class="chip chip-type">contract</span>
-                        <span class="chip chip-dest">→ Email</span>
+                        <span class="chip chip-dest">→ Azure Blob</span>
                       </div>
                     </div>
                     <span class="file-tag file-tag--routing">Routing…</span>
@@ -175,9 +177,9 @@
                     <div class="file-info">
                       <span class="file-name">Report_May.xlsx</span>
                       <div class="file-chips">
-                        <span class="chip chip-client">Client_01</span>
+                        <span class="chip chip-source">Slack</span>
                         <span class="chip chip-type">report</span>
-                        <span class="chip chip-tag">#monthly</span>
+                        <span class="chip chip-dest">→ Custom Server</span>
                       </div>
                     </div>
                     <span class="file-tag file-tag--done">✓ Slotted</span>

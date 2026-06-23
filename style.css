@@ -506,6 +506,10 @@ body {
   border-radius: 99px;
   letter-spacing: 0.02em;
 }
+.chip-source {
+  background: rgba(59,130,246,.25);
+  color: #93c5fd;
+}
 .chip-client {
   background: rgba(108,71,255,.25);
   color: #a78bfa;
