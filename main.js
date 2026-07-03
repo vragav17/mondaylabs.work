@@ -6,7 +6,6 @@ toggle?.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close mobile nav on link click
 navLinks?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
@@ -25,7 +24,7 @@ document.getElementById('waitlistForm')?.addEventListener('submit', (e) => {
   input.disabled = true;
 });
 
-// Subtle scroll fade-in for sections
+// Reveal on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -33,18 +32,15 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-document.querySelectorAll('.product-featured, .about-inner, .stat-card, .cs-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+const revealEls = document.querySelectorAll('.bento-card, .step, .about-grid > *, .section-head, .hero-flow');
+revealEls.forEach(el => {
+  el.classList.add('reveal');
   observer.observe(el);
 });
 
-document.addEventListener('animationend', () => {}, { once: true });
-
-// Override: add visible class
-const style = document.createElement('style');
-style.textContent = '.visible { opacity: 1 !important; transform: none !important; }';
-document.head.appendChild(style);
+// Fallback: never leave content hidden if the observer doesn't fire
+setTimeout(() => {
+  revealEls.forEach(el => el.classList.add('visible'));
+}, 2500);

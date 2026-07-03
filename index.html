@@ -32,11 +32,11 @@
   <meta name="twitter:image" content="https://mondaylabs.work/og-image.png" />
 
   <!-- Theme & App -->
-  <meta name="theme-color" content="#6C47FF" />
+  <meta name="theme-color" content="#3b82f6" />
   <meta name="application-name" content="MondayLabs" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&family=Sora:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- Structured Data -->
@@ -113,11 +113,11 @@
         </span><span>ondayLabs</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#products">Products</a></li>
+        <li><a href="#products">Product</a></li>
+        <li><a href="#how">How it works</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#products" class="btn btn-primary nav-cta">Explore Products</a>
+      <a href="#contact" class="btn btn-dark nav-cta">Join Waitlist</a>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -125,251 +125,199 @@
   </header>
 
   <main id="main-content">
+
   <!-- HERO -->
   <section class="hero" aria-label="Hero">
-    <div class="container hero-inner">
-      <div class="hero-logo-lockup" aria-label="MondayLabs">
-        <span style="display:inline-flex;align-items:baseline;font-family:'Sora',sans-serif;font-size:42px;font-weight:600;letter-spacing:-0.035em;color:#181522;">
-          <span style="position:relative;display:inline-block;">
-            <span style="background:linear-gradient(135deg,#5b53e8,#3b82f6,#22b8c4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">M</span>
-            <svg width="70" height="70" viewBox="0 0 74 74" fill="none" aria-hidden="true" style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);pointer-events:none;">
-              <g transform="rotate(-22 37 37)"><circle r="4.6" fill="#3b82f6"><animateMotion dur="8s" repeatCount="indefinite" path="M5,37 a32,12 0 1,0 64,0 a32,12 0 1,0 -64,0"/></circle></g>
-            </svg>
-          </span><span>ondayLabs</span>
-        </span>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Independent software studio
+          </div>
+          <h1 class="hero-headline">
+            Your files know<br />where to go.<br />
+            <span class="headline-accent">We send them there.</span>
+          </h1>
+          <p class="hero-sub">
+            MondayLabs builds SlotMyFiles — the routing layer between your chat
+            apps and your cloud storage. Files arrive in Slack, WhatsApp, or Email
+            and land in S3, OneDrive, Google Drive, or Azure. Automatically.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-dark btn-lg">Get Early Access</a>
+            <a href="#how" class="btn btn-plain btn-lg">See how it works <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <!-- Flow diagram -->
+        <div class="hero-flow" aria-label="File routing diagram">
+          <div class="flow-col flow-sources">
+            <div class="flow-node" data-delay="0"><span class="flow-emoji">💬</span> Slack</div>
+            <div class="flow-node" data-delay="1"><span class="flow-emoji">📱</span> WhatsApp</div>
+            <div class="flow-node" data-delay="2"><span class="flow-emoji">✉️</span> Email</div>
+          </div>
+          <div class="flow-center">
+            <div class="flow-engine">
+              <div class="flow-engine-ring" aria-hidden="true"></div>
+              <span class="flow-engine-label">Slot<br />My<br />Files</span>
+            </div>
+            <div class="flow-lines" aria-hidden="true">
+              <span class="flow-packet p1"></span>
+              <span class="flow-packet p2"></span>
+              <span class="flow-packet p3"></span>
+            </div>
+          </div>
+          <div class="flow-col flow-dests">
+            <div class="flow-node" data-delay="0"><span class="flow-emoji">🪣</span> Amazon S3</div>
+            <div class="flow-node" data-delay="1"><span class="flow-emoji">☁️</span> OneDrive</div>
+            <div class="flow-node" data-delay="2"><span class="flow-emoji">🟢</span> Google Drive</div>
+            <div class="flow-node" data-delay="3"><span class="flow-emoji">🗄️</span> Azure Blob</div>
+            <div class="flow-node" data-delay="4"><span class="flow-emoji">🔌</span> Custom Server</div>
+          </div>
+        </div>
       </div>
-      <div class="hero-badge">Independent Software Studio</div>
-      <h1 class="hero-headline">
-        We build software<br />
-        that <em>just works</em>.
-      </h1>
-      <p class="hero-sub">
-        MondayLabs crafts focused, polished products that cut through
-        complexity — tools you'll actually want to use every day.
-      </p>
-      <div class="hero-actions">
-        <a href="#products" class="btn btn-primary btn-lg">See Our Products</a>
-        <a href="#about" class="btn btn-ghost btn-lg">Learn More</a>
+
+      <!-- Ticker strip -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Invoice_Q2.pdf → OneDrive</span><span class="tick-sep">●</span>
+          <span>Catalog.zip → Amazon S3</span><span class="tick-sep">●</span>
+          <span>Contract.docx → Azure Blob</span><span class="tick-sep">●</span>
+          <span>Report_May.xlsx → Google Drive</span><span class="tick-sep">●</span>
+          <span>Receipt_0341.jpg → Custom Server</span><span class="tick-sep">●</span>
+          <span>Invoice_Q2.pdf → OneDrive</span><span class="tick-sep">●</span>
+          <span>Catalog.zip → Amazon S3</span><span class="tick-sep">●</span>
+          <span>Contract.docx → Azure Blob</span><span class="tick-sep">●</span>
+          <span>Report_May.xlsx → Google Drive</span><span class="tick-sep">●</span>
+          <span>Receipt_0341.jpg → Custom Server</span><span class="tick-sep">●</span>
+        </div>
       </div>
-    </div>
-    <div class="hero-bg">
-      <div class="hero-blob blob-1"></div>
-      <div class="hero-blob blob-2"></div>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
-  <section class="products" id="products" aria-label="Products">
+  <!-- PRODUCT / BENTO -->
+  <section class="product" id="products" aria-label="Products">
     <div class="container">
-      <div class="section-label">Products</div>
-      <h2 class="section-title">Tools that move you forward</h2>
-      <p class="section-sub">Every product we ship is built to solve one problem exceptionally well.</p>
-
-      <div class="product-featured">
-        <div class="product-featured-content">
-          <div class="product-tag">Slack · WhatsApp · Email</div>
-          <h3 class="product-name">SlotMyFiles</h3>
-          <p class="product-desc">
-            Receive files from Slack, WhatsApp, or Email — and route them
-            automatically to the storage destination of your choice. No manual
-            downloads, no switching apps, zero friction.
-          </p>
-          <ul class="product-features">
-            <li>
-              <span class="feature-icon">📥</span>
-              <span>Capture files from <strong>Slack</strong>, <strong>WhatsApp</strong>, or <strong>Email</strong> in one unified inbox</span>
-            </li>
-            <li>
-              <span class="feature-icon">☁️</span>
-              <span>Route to <strong>Amazon S3</strong>, <strong>OneDrive</strong>, <strong>Google Drive</strong>, <strong>Azure Blob</strong>, or your own custom server</span>
-            </li>
-            <li>
-              <span class="feature-icon">⚡</span>
-              <span>Rules engine auto-slots by source, file type, sender, and custom tags</span>
-            </li>
-            <li>
-              <span class="feature-icon">🔌</span>
-              <span>Bring your own storage — connect any S3-compatible or custom endpoint</span>
-            </li>
-          </ul>
-          <div class="product-actions">
-            <a href="#contact" class="btn btn-primary">Get Early Access</a>
-            <a href="#contact" class="btn btn-outline">Learn More</a>
-          </div>
-        </div>
-        <div class="product-featured-visual">
-          <div class="app-mockup">
-            <div class="mockup-titlebar">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-              <span class="mockup-title">SlotMyFiles</span>
-              <span class="mockup-live">⚡ Auto-routing ON</span>
-            </div>
-            <div class="mockup-body">
-              <div class="mockup-sidebar">
-                <div class="sidebar-section-label">Sources</div>
-                <div class="sidebar-item active">💬 Slack</div>
-                <div class="sidebar-item">📱 WhatsApp</div>
-                <div class="sidebar-item">✉️ Email</div>
-                <div class="sidebar-divider"></div>
-                <div class="sidebar-section-label">Destinations</div>
-                <div class="sidebar-item">🪣 Amazon S3</div>
-                <div class="sidebar-item">☁️ OneDrive</div>
-                <div class="sidebar-item">🟢 Google Drive</div>
-                <div class="sidebar-item">🗄️ Azure Blob</div>
-                <div class="sidebar-item">🔌 Custom Server</div>
-              </div>
-              <div class="mockup-main">
-                <div class="mockup-queue-header">
-                  <span>Incoming Files</span>
-                  <span class="queue-count">4 files</span>
-                </div>
-                <div class="file-list">
-                  <div class="file-item file-item--done">
-                    <span class="file-icon">📄</span>
-                    <div class="file-info">
-                      <span class="file-name">Invoice_Q2_2026.pdf</span>
-                      <div class="file-chips">
-                        <span class="chip chip-source">Slack</span>
-                        <span class="chip chip-type">invoice</span>
-                        <span class="chip chip-dest">→ OneDrive</span>
-                      </div>
-                    </div>
-                    <span class="file-tag file-tag--done">✓ Slotted</span>
-                  </div>
-                  <div class="file-item file-item--done">
-                    <span class="file-icon">🖼️</span>
-                    <div class="file-info">
-                      <span class="file-name">Product_Catalog.zip</span>
-                      <div class="file-chips">
-                        <span class="chip chip-source">WhatsApp</span>
-                        <span class="chip chip-type">media</span>
-                        <span class="chip chip-dest">→ Amazon S3</span>
-                      </div>
-                    </div>
-                    <span class="file-tag file-tag--done">✓ Slotted</span>
-                  </div>
-                  <div class="file-item file-item--incoming">
-                    <span class="file-icon">📝</span>
-                    <div class="file-info">
-                      <span class="file-name">Contract_Draft.docx</span>
-                      <div class="file-chips">
-                        <span class="chip chip-source">Email</span>
-                        <span class="chip chip-type">contract</span>
-                        <span class="chip chip-dest">→ Azure Blob</span>
-                      </div>
-                    </div>
-                    <span class="file-tag file-tag--routing">Routing…</span>
-                  </div>
-                  <div class="file-item file-item--done">
-                    <span class="file-icon">📊</span>
-                    <div class="file-info">
-                      <span class="file-name">Report_May.xlsx</span>
-                      <div class="file-chips">
-                        <span class="chip chip-source">Slack</span>
-                        <span class="chip chip-type">report</span>
-                        <span class="chip chip-dest">→ Google Drive</span>
-                      </div>
-                    </div>
-                    <span class="file-tag file-tag--done">✓ Slotted</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="section-head">
+        <span class="section-kicker">01 — Product</span>
+        <h2 class="section-title">SlotMyFiles</h2>
+        <p class="section-sub">
+          One inbox for every file your business receives. One rule engine
+          deciding where each file belongs. Zero manual downloads.
+        </p>
       </div>
 
-      <!-- More products teaser -->
-      <div class="coming-soon">
-        <p class="coming-soon-text">More products in the pipeline</p>
-        <div class="coming-soon-cards">
-          <div class="cs-card">
-            <div class="cs-icon">🗓️</div>
-            <div class="cs-label">Coming Soon</div>
+      <div class="bento">
+        <article class="bento-card bento-wide">
+          <div class="bento-tag">Sources</div>
+          <h3>Files arrive from anywhere</h3>
+          <p>Slack channels, WhatsApp chats, and email attachments all land in one unified inbox — no matter who sent them or when.</p>
+          <div class="bento-chips">
+            <span class="chip-lg">💬 Slack</span>
+            <span class="chip-lg">📱 WhatsApp</span>
+            <span class="chip-lg">✉️ Email</span>
           </div>
-          <div class="cs-card">
-            <div class="cs-icon">✉️</div>
-            <div class="cs-label">Coming Soon</div>
+        </article>
+
+        <article class="bento-card bento-tall bento-accent">
+          <div class="bento-tag bento-tag-light">Rules Engine</div>
+          <h3>Route by anything</h3>
+          <p>Sender, source, file type, or custom tags — write a rule once and every matching file slots itself forever.</p>
+          <div class="rule-demo" aria-hidden="true">
+            <div class="rule-line"><span class="rule-kw">when</span> sender = <span class="rule-val">"Supplier A"</span></div>
+            <div class="rule-line"><span class="rule-kw">and</span> type = <span class="rule-val">invoice</span></div>
+            <div class="rule-line rule-then"><span class="rule-kw">→ slot to</span> <span class="rule-val">OneDrive/Invoices</span></div>
           </div>
-          <div class="cs-card">
-            <div class="cs-icon">📊</div>
-            <div class="cs-label">Coming Soon</div>
+        </article>
+
+        <article class="bento-card">
+          <div class="bento-tag">Destinations</div>
+          <h3>Lands where it belongs</h3>
+          <div class="dest-list">
+            <span>🪣 Amazon S3</span>
+            <span>☁️ OneDrive</span>
+            <span>🟢 Google Drive</span>
+            <span>🗄️ Azure Blob</span>
+            <span>🔌 Custom Server</span>
           </div>
-        </div>
+        </article>
+
+        <article class="bento-card">
+          <div class="bento-tag">Bring your own</div>
+          <h3>Your storage, your keys</h3>
+          <p>Connect any S3-compatible endpoint or your own server. Your files never sit on ours.</p>
+        </article>
       </div>
+
+      <div class="product-cta">
+        <a href="#contact" class="btn btn-dark btn-lg">Get Early Access</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how" aria-label="How it works">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">02 — How it works</span>
+        <h2 class="section-title">Three steps. Then never again.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>Connect your sources</h3>
+          <p>Link Slack, WhatsApp Business, or an email address in under two minutes.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>Write your rules</h3>
+          <p>Tag by client, file type, or keyword — or let smart defaults do it for you.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>Files slot themselves</h3>
+          <p>Every incoming file routes to S3, OneDrive, Google Drive, Azure, or your server. You do nothing.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="about" aria-label="About MondayLabs">
-    <div class="container about-inner">
-      <div class="about-text">
-        <div class="section-label">About</div>
+    <div class="container about-grid">
+      <div>
+        <span class="section-kicker">03 — About</span>
         <h2 class="section-title">Small team.<br />Big focus.</h2>
-        <p>
-          MondayLabs is an independent software studio. We believe the best
-          tools are ones that do one thing brilliantly, load in an instant, and
-          never get in your way.
-        </p>
-        <p>
-          We're not chasing growth metrics or VC rounds — we're building
-          software we'd want to use ourselves, and sharing it with people who
-          feel the same way.
-        </p>
-        <div class="values">
-          <div class="value-item">
-            <span class="value-icon">🎯</span>
-            <div>
-              <strong>Focused</strong>
-              <p>One problem, solved well.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <span class="value-icon">⚡</span>
-            <div>
-              <strong>Fast</strong>
-              <p>Performance is a feature.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <span class="value-icon">🔒</span>
-            <div>
-              <strong>Private</strong>
-              <p>Your data stays yours.</p>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="about-visual">
-        <div class="stat-card">
-          <span class="stat-num">1</span>
-          <span class="stat-label">Product shipped</span>
-        </div>
-        <div class="stat-card stat-card--accent">
-          <span class="stat-num">∞</span>
-          <span class="stat-label">Files organized</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">0</span>
-          <span class="stat-label">Tracking scripts</span>
+      <div class="about-copy">
+        <p>
+          MondayLabs is an independent software studio. We believe the best tools
+          do one thing brilliantly, load in an instant, and never get in your way.
+        </p>
+        <p>
+          We're not chasing growth metrics or VC rounds — we're building software
+          we'd want to use ourselves, and sharing it with people who feel the same way.
+        </p>
+        <div class="about-values">
+          <div class="value"><strong>Focused</strong><span>One problem, solved well.</span></div>
+          <div class="value"><strong>Fast</strong><span>Performance is a feature.</span></div>
+          <div class="value"><strong>Private</strong><span>Your data stays yours.</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section" id="contact" aria-label="Join Waitlist">
+  <section class="cta" id="contact" aria-label="Join Waitlist">
     <div class="container cta-inner">
-      <h2 class="cta-title">Stay in the loop</h2>
-      <p class="cta-sub">Be the first to know when SlotMyFiles launches and get early-access pricing.</p>
+      <h2 class="cta-title">Stop downloading.<br />Start slotting.</h2>
+      <p class="cta-sub">Join the waitlist for early access to SlotMyFiles and founding-member pricing.</p>
       <form class="cta-form" id="waitlistForm">
-        <input type="email" placeholder="you@example.com" required class="cta-input" />
-        <button type="submit" class="btn btn-primary btn-lg">Join the Waitlist</button>
+        <input type="email" placeholder="you@yourbusiness.com" required class="cta-input" aria-label="Email address" />
+        <button type="submit" class="btn btn-invert btn-lg">Join the Waitlist</button>
       </form>
       <p class="cta-fine">No spam. Unsubscribe any time.</p>
-      <p class="cta-fine cta-direct">Or reach us directly — <a href="https://me.mondaylabs.work" target="_blank" rel="noopener">me.mondaylabs.work</a></p>
     </div>
   </section>
 
@@ -379,10 +327,10 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" class="nav-logo" style="font-family:'Sora',sans-serif;font-size:20px;font-weight:600;letter-spacing:-0.035em;color:rgba(255,255,255,0.85);" aria-label="MondayLabs">
+        <a href="#" class="nav-logo footer-logo" style="font-family:'Sora',sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.035em;color:#181522;" aria-label="MondayLabs">
           <span style="position:relative;display:inline-block;">
             <span style="background:linear-gradient(135deg,#5b53e8,#3b82f6,#22b8c4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">M</span>
-            <svg width="34" height="34" viewBox="0 0 74 74" fill="none" aria-hidden="true" style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);pointer-events:none;">
+            <svg width="36" height="36" viewBox="0 0 74 74" fill="none" aria-hidden="true" style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);pointer-events:none;">
               <g transform="rotate(-22 37 37)"><circle r="4.6" fill="#3b82f6"><animateMotion dur="8s" repeatCount="indefinite" path="M5,37 a32,12 0 1,0 64,0 a32,12 0 1,0 -64,0"/></circle></g>
             </svg>
           </span><span>ondayLabs</span>
@@ -391,9 +339,10 @@
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Products</h4>
+          <h4>Product</h4>
           <ul>
             <li><a href="#products">SlotMyFiles</a></li>
+            <li><a href="#how">How it works</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -407,6 +356,7 @@
     </div>
     <div class="footer-bottom container">
       <p>&copy; 2026 MondayLabs. All rights reserved.</p>
+      <p class="footer-domain">mondaylabs.work</p>
     </div>
   </footer>
 
