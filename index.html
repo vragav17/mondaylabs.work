@@ -32,11 +32,11 @@
   <meta name="twitter:image" content="https://mondaylabs.work/og-image.png" />
 
   <!-- Theme & App -->
-  <meta name="theme-color" content="#3b82f6" />
+  <meta name="theme-color" content="#0A0C10" />
   <meta name="application-name" content="MondayLabs" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- Structured Data -->
@@ -101,10 +101,23 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <div class="lab-grid" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <!-- TOP STATUS BAR -->
+  <div class="statusbar" aria-hidden="true">
+    <div class="container statusbar-inner">
+      <span class="sb-item"><span class="sb-led"></span> SYSTEMS NOMINAL</span>
+      <span class="sb-item sb-hide-sm">LAB://MONDAYLABS.WORK</span>
+      <span class="sb-item sb-hide-sm">UPTIME <span id="uptime">00:00:00</span></span>
+      <span class="sb-item">UTC <span id="clock">--:--:--</span></span>
+    </div>
+  </div>
+
   <!-- NAV -->
   <header class="nav-wrapper">
     <nav class="nav container">
-      <a href="#" class="nav-logo" style="font-family:'Sora',sans-serif;font-size:24px;font-weight:600;letter-spacing:-0.035em;color:#181522;" aria-label="MondayLabs">
+      <a href="#" class="nav-logo" style="font-family:'Sora',sans-serif;font-size:24px;font-weight:600;letter-spacing:-0.035em;color:#E8EBF0;" aria-label="MondayLabs">
         <span style="position:relative;display:inline-block;">
           <span style="background:linear-gradient(135deg,#5b53e8,#3b82f6,#22b8c4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">M</span>
           <svg width="40" height="40" viewBox="0 0 74 74" fill="none" aria-hidden="true" style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);pointer-events:none;">
@@ -113,11 +126,11 @@
         </span><span>ondayLabs</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#products">Product</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#products"><span class="nav-idx">01</span> Product</a></li>
+        <li><a href="#how"><span class="nav-idx">02</span> Pipeline</a></li>
+        <li><a href="#about"><span class="nav-idx">03</span> Lab</a></li>
       </ul>
-      <a href="#contact" class="btn btn-dark nav-cta">Join Waitlist</a>
+      <a href="#contact" class="btn btn-solid nav-cta">[ JOIN_WAITLIST ]</a>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -131,168 +144,180 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="hero-eyebrow">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            Independent software studio
+          <div class="hero-session">
+            <span class="prompt-sym">$</span> ./init --studio mondaylabs<span class="cursor" aria-hidden="true">▊</span>
           </div>
           <h1 class="hero-headline">
-            Your files know<br />where to go.<br />
-            <span class="headline-accent">We send them there.</span>
+            EXPERIMENTS IN<br />
+            <span class="headline-accent">FILE LOGISTICS</span>
           </h1>
           <p class="hero-sub">
-            MondayLabs builds SlotMyFiles — the routing layer between your chat
-            apps and your cloud storage. Files arrive in Slack, WhatsApp, or Email
-            and land in S3, OneDrive, Google Drive, or Azure. Automatically.
+            MondayLabs is a compute lab building the routing layer between your
+            chat apps and your cloud storage. Files arrive in Slack, WhatsApp,
+            or Email — and land in S3, OneDrive, Google Drive, or Azure. Automatically.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-dark btn-lg">Get Early Access</a>
-            <a href="#how" class="btn btn-plain btn-lg">See how it works <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="btn btn-solid btn-lg">[ GET_EARLY_ACCESS ]</a>
+            <a href="#how" class="btn btn-ghost btn-lg">view_pipeline() →</a>
           </div>
+          <dl class="hero-readout" aria-label="Lab metrics">
+            <div class="readout"><dt>SOURCES</dt><dd>03</dd></div>
+            <div class="readout"><dt>DESTINATIONS</dt><dd>05</dd></div>
+            <div class="readout"><dt>MANUAL_STEPS</dt><dd class="readout-zero">00</dd></div>
+          </dl>
         </div>
 
-        <!-- Flow diagram -->
-        <div class="hero-flow" aria-label="File routing diagram">
-          <div class="flow-col flow-sources">
-            <div class="flow-node" data-delay="0"><span class="flow-emoji">💬</span> Slack</div>
-            <div class="flow-node" data-delay="1"><span class="flow-emoji">📱</span> WhatsApp</div>
-            <div class="flow-node" data-delay="2"><span class="flow-emoji">✉️</span> Email</div>
+        <!-- Terminal -->
+        <div class="terminal" role="img" aria-label="Terminal showing SlotMyFiles routing files">
+          <div class="terminal-bar">
+            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+            <span class="terminal-title">slotmyfiles — daemon.log</span>
+            <span class="terminal-badge">LIVE</span>
           </div>
-          <div class="flow-center">
-            <div class="flow-engine">
-              <div class="flow-engine-ring" aria-hidden="true"></div>
-              <span class="flow-engine-label">Slot<br />My<br />Files</span>
-            </div>
-            <div class="flow-lines" aria-hidden="true">
-              <span class="flow-packet p1"></span>
-              <span class="flow-packet p2"></span>
-              <span class="flow-packet p3"></span>
-            </div>
+          <div class="terminal-body" id="termBody">
+            <div class="t-line t-boot">[ OK ] slotmyfiles.service — routing daemon started</div>
+            <div class="t-line t-boot">[ OK ] watchers attached: slack, whatsapp, email</div>
+            <div class="t-line t-boot">[ OK ] sinks online: s3, onedrive, gdrive, azure-blob, custom</div>
+            <div class="t-line t-sep">──────────────────────────────────────────</div>
+            <div class="t-line"><span class="t-src">slack</span> ▸ Invoice_Q2_2026.pdf <span class="t-arrow">→</span> <span class="t-dest">onedrive:/Invoices</span> <span class="t-ok">✓ 0.4s</span></div>
+            <div class="t-line"><span class="t-src">whatsapp</span> ▸ Product_Catalog.zip <span class="t-arrow">→</span> <span class="t-dest">s3://assets</span> <span class="t-ok">✓ 1.1s</span></div>
+            <div class="t-line"><span class="t-src">email</span> ▸ Contract_Draft.docx <span class="t-arrow">→</span> <span class="t-dest">azure-blob:/legal</span> <span class="t-ok">✓ 0.7s</span></div>
+            <div class="t-line"><span class="t-src">slack</span> ▸ Report_May.xlsx <span class="t-arrow">→</span> <span class="t-dest">gdrive:/Reports</span> <span class="t-ok">✓ 0.5s</span></div>
+            <div class="t-line"><span class="t-src">email</span> ▸ Receipt_0341.jpg <span class="t-arrow">→</span> <span class="t-dest">custom:/receipts</span> <span class="t-ok">✓ 0.3s</span></div>
+            <div class="t-line t-prompt">$ <span class="cursor" aria-hidden="true">▊</span></div>
           </div>
-          <div class="flow-col flow-dests">
-            <div class="flow-node" data-delay="0"><span class="flow-emoji">🪣</span> Amazon S3</div>
-            <div class="flow-node" data-delay="1"><span class="flow-emoji">☁️</span> OneDrive</div>
-            <div class="flow-node" data-delay="2"><span class="flow-emoji">🟢</span> Google Drive</div>
-            <div class="flow-node" data-delay="3"><span class="flow-emoji">🗄️</span> Azure Blob</div>
-            <div class="flow-node" data-delay="4"><span class="flow-emoji">🔌</span> Custom Server</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ticker strip -->
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>Invoice_Q2.pdf → OneDrive</span><span class="tick-sep">●</span>
-          <span>Catalog.zip → Amazon S3</span><span class="tick-sep">●</span>
-          <span>Contract.docx → Azure Blob</span><span class="tick-sep">●</span>
-          <span>Report_May.xlsx → Google Drive</span><span class="tick-sep">●</span>
-          <span>Receipt_0341.jpg → Custom Server</span><span class="tick-sep">●</span>
-          <span>Invoice_Q2.pdf → OneDrive</span><span class="tick-sep">●</span>
-          <span>Catalog.zip → Amazon S3</span><span class="tick-sep">●</span>
-          <span>Contract.docx → Azure Blob</span><span class="tick-sep">●</span>
-          <span>Report_May.xlsx → Google Drive</span><span class="tick-sep">●</span>
-          <span>Receipt_0341.jpg → Custom Server</span><span class="tick-sep">●</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCT / BENTO -->
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>SLACK → S3</span><span class="m-sep">//</span>
+      <span>WHATSAPP → ONEDRIVE</span><span class="m-sep">//</span>
+      <span>EMAIL → GOOGLE_DRIVE</span><span class="m-sep">//</span>
+      <span>SLACK → AZURE_BLOB</span><span class="m-sep">//</span>
+      <span>EMAIL → CUSTOM_SERVER</span><span class="m-sep">//</span>
+      <span>SLACK → S3</span><span class="m-sep">//</span>
+      <span>WHATSAPP → ONEDRIVE</span><span class="m-sep">//</span>
+      <span>EMAIL → GOOGLE_DRIVE</span><span class="m-sep">//</span>
+      <span>SLACK → AZURE_BLOB</span><span class="m-sep">//</span>
+      <span>EMAIL → CUSTOM_SERVER</span><span class="m-sep">//</span>
+    </div>
+  </div>
+
+  <!-- PRODUCT -->
   <section class="product" id="products" aria-label="Products">
     <div class="container">
       <div class="section-head">
-        <span class="section-kicker">01 — Product</span>
-        <h2 class="section-title">SlotMyFiles</h2>
+        <span class="section-kicker">// 01 — PRODUCT</span>
+        <h2 class="section-title">SLOTMYFILES<span class="title-cursor">_</span></h2>
         <p class="section-sub">
           One inbox for every file your business receives. One rule engine
           deciding where each file belongs. Zero manual downloads.
         </p>
       </div>
 
-      <div class="bento">
-        <article class="bento-card bento-wide">
-          <div class="bento-tag">Sources</div>
-          <h3>Files arrive from anywhere</h3>
+      <div class="modules">
+        <article class="module">
+          <div class="module-head">
+            <span class="module-id">MOD-01</span>
+            <span class="module-status">● ACTIVE</span>
+          </div>
+          <h3>INPUT_CAPTURE</h3>
           <p>Slack channels, WhatsApp chats, and email attachments all land in one unified inbox — no matter who sent them or when.</p>
-          <div class="bento-chips">
-            <span class="chip-lg">💬 Slack</span>
-            <span class="chip-lg">📱 WhatsApp</span>
-            <span class="chip-lg">✉️ Email</span>
+          <div class="module-tags">
+            <span>slack</span><span>whatsapp</span><span>email</span>
           </div>
         </article>
 
-        <article class="bento-card bento-tall bento-accent">
-          <div class="bento-tag bento-tag-light">Rules Engine</div>
-          <h3>Route by anything</h3>
+        <article class="module module-featured">
+          <div class="module-head">
+            <span class="module-id">MOD-02</span>
+            <span class="module-status">● ACTIVE</span>
+          </div>
+          <h3>RULES_ENGINE</h3>
           <p>Sender, source, file type, or custom tags — write a rule once and every matching file slots itself forever.</p>
-          <div class="rule-demo" aria-hidden="true">
-            <div class="rule-line"><span class="rule-kw">when</span> sender = <span class="rule-val">"Supplier A"</span></div>
-            <div class="rule-line"><span class="rule-kw">and</span> type = <span class="rule-val">invoice</span></div>
-            <div class="rule-line rule-then"><span class="rule-kw">→ slot to</span> <span class="rule-val">OneDrive/Invoices</span></div>
-          </div>
+          <pre class="module-code"><code><span class="c-kw">when</span> sender == <span class="c-str">"Supplier A"</span>
+ <span class="c-kw">and</span> type == <span class="c-str">invoice</span>
+<span class="c-fn">→ slot_to</span>(<span class="c-str">"onedrive:/Invoices"</span>)</code></pre>
         </article>
 
-        <article class="bento-card">
-          <div class="bento-tag">Destinations</div>
-          <h3>Lands where it belongs</h3>
-          <div class="dest-list">
-            <span>🪣 Amazon S3</span>
-            <span>☁️ OneDrive</span>
-            <span>🟢 Google Drive</span>
-            <span>🗄️ Azure Blob</span>
-            <span>🔌 Custom Server</span>
+        <article class="module">
+          <div class="module-head">
+            <span class="module-id">MOD-03</span>
+            <span class="module-status">● ACTIVE</span>
           </div>
+          <h3>OUTPUT_SINKS</h3>
+          <p>Every destination your stack already uses:</p>
+          <ul class="sink-list">
+            <li>amazon_s3</li>
+            <li>onedrive</li>
+            <li>google_drive</li>
+            <li>azure_blob</li>
+            <li>custom_server</li>
+          </ul>
         </article>
 
-        <article class="bento-card">
-          <div class="bento-tag">Bring your own</div>
-          <h3>Your storage, your keys</h3>
+        <article class="module">
+          <div class="module-head">
+            <span class="module-id">MOD-04</span>
+            <span class="module-status">● ACTIVE</span>
+          </div>
+          <h3>BYO_STORAGE</h3>
           <p>Connect any S3-compatible endpoint or your own server. Your files never sit on ours.</p>
+          <div class="module-tags">
+            <span>your_keys</span><span>your_bucket</span><span>zero_lock-in</span>
+          </div>
         </article>
       </div>
 
       <div class="product-cta">
-        <a href="#contact" class="btn btn-dark btn-lg">Get Early Access</a>
+        <a href="#contact" class="btn btn-solid btn-lg">[ GET_EARLY_ACCESS ]</a>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- PIPELINE -->
   <section class="how" id="how" aria-label="How it works">
     <div class="container">
       <div class="section-head">
-        <span class="section-kicker">02 — How it works</span>
-        <h2 class="section-title">Three steps. Then never again.</h2>
+        <span class="section-kicker">// 02 — PIPELINE</span>
+        <h2 class="section-title">THREE STEPS. THEN NEVER AGAIN.</h2>
       </div>
-      <ol class="steps">
-        <li class="step">
-          <span class="step-num">1</span>
-          <h3>Connect your sources</h3>
+      <ol class="pipeline">
+        <li class="stage">
+          <div class="stage-head"><span class="stage-num">STAGE_1</span></div>
+          <h3>connect_sources()</h3>
           <p>Link Slack, WhatsApp Business, or an email address in under two minutes.</p>
         </li>
-        <li class="step">
-          <span class="step-num">2</span>
-          <h3>Write your rules</h3>
+        <li class="pipe-arrow" aria-hidden="true">»»</li>
+        <li class="stage">
+          <div class="stage-head"><span class="stage-num">STAGE_2</span></div>
+          <h3>define_rules()</h3>
           <p>Tag by client, file type, or keyword — or let smart defaults do it for you.</p>
         </li>
-        <li class="step">
-          <span class="step-num">3</span>
-          <h3>Files slot themselves</h3>
+        <li class="pipe-arrow" aria-hidden="true">»»</li>
+        <li class="stage">
+          <div class="stage-head"><span class="stage-num">STAGE_3</span></div>
+          <h3>auto_slot()</h3>
           <p>Every incoming file routes to S3, OneDrive, Google Drive, Azure, or your server. You do nothing.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- LAB / ABOUT -->
   <section class="about" id="about" aria-label="About MondayLabs">
     <div class="container about-grid">
       <div>
-        <span class="section-kicker">03 — About</span>
-        <h2 class="section-title">Small team.<br />Big focus.</h2>
+        <span class="section-kicker">// 03 — LAB</span>
+        <h2 class="section-title">SMALL TEAM.<br />BIG FOCUS.</h2>
       </div>
       <div class="about-copy">
         <p>
-          MondayLabs is an independent software studio. We believe the best tools
+          MondayLabs is an independent compute lab. We believe the best tools
           do one thing brilliantly, load in an instant, and never get in your way.
         </p>
         <p>
@@ -300,9 +325,9 @@
           we'd want to use ourselves, and sharing it with people who feel the same way.
         </p>
         <div class="about-values">
-          <div class="value"><strong>Focused</strong><span>One problem, solved well.</span></div>
-          <div class="value"><strong>Fast</strong><span>Performance is a feature.</span></div>
-          <div class="value"><strong>Private</strong><span>Your data stays yours.</span></div>
+          <div class="value"><span class="value-key">focused:</span><strong>one problem, solved well</strong></div>
+          <div class="value"><span class="value-key">fast:</span><strong>performance is a feature</strong></div>
+          <div class="value"><span class="value-key">private:</span><strong>your data stays yours</strong></div>
         </div>
       </div>
     </div>
@@ -311,13 +336,15 @@
   <!-- CTA -->
   <section class="cta" id="contact" aria-label="Join Waitlist">
     <div class="container cta-inner">
-      <h2 class="cta-title">Stop downloading.<br />Start slotting.</h2>
+      <span class="section-kicker">// ENLIST</span>
+      <h2 class="cta-title">STOP DOWNLOADING.<br />START SLOTTING.</h2>
       <p class="cta-sub">Join the waitlist for early access to SlotMyFiles and founding-member pricing.</p>
       <form class="cta-form" id="waitlistForm">
+        <span class="cta-prompt" aria-hidden="true">$</span>
         <input type="email" placeholder="you@yourbusiness.com" required class="cta-input" aria-label="Email address" />
-        <button type="submit" class="btn btn-invert btn-lg">Join the Waitlist</button>
+        <button type="submit" class="btn btn-solid btn-lg">[ SUBMIT ]</button>
       </form>
-      <p class="cta-fine">No spam. Unsubscribe any time.</p>
+      <p class="cta-fine"># no spam. unsubscribe any time.</p>
     </div>
   </section>
 
@@ -327,7 +354,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" class="nav-logo footer-logo" style="font-family:'Sora',sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.035em;color:#181522;" aria-label="MondayLabs">
+        <a href="#" class="nav-logo footer-logo" style="font-family:'Sora',sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.035em;color:#E8EBF0;" aria-label="MondayLabs">
           <span style="position:relative;display:inline-block;">
             <span style="background:linear-gradient(135deg,#5b53e8,#3b82f6,#22b8c4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">M</span>
             <svg width="36" height="36" viewBox="0 0 74 74" fill="none" aria-hidden="true" style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);pointer-events:none;">
@@ -335,28 +362,28 @@
             </svg>
           </span><span>ondayLabs</span>
         </a>
-        <p>Building focused software that works.</p>
+        <p>// building focused software that works</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Product</h4>
+          <h4>/product</h4>
           <ul>
-            <li><a href="#products">SlotMyFiles</a></li>
-            <li><a href="#how">How it works</a></li>
+            <li><a href="#products">slotmyfiles</a></li>
+            <li><a href="#how">pipeline</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>/company</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">lab</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>&copy; 2026 MondayLabs. All rights reserved.</p>
-      <p class="footer-domain">mondaylabs.work</p>
+      <p>© 2026 MondayLabs. All rights reserved.</p>
+      <p class="footer-domain">[EOF] mondaylabs.work</p>
     </div>
   </footer>
 
